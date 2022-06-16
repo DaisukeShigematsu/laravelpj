@@ -5,7 +5,9 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
+                    <a href="{{ route('dashboard') }}">
                     <h2>Atte</h2>
+                    </a>
                 </div>
 
                 <!-- Navigation Links -->
@@ -39,7 +41,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log Out') }}
+                                    ログアウト
                             </x-dropdown-link>
                         </form>
                     </x-slot>

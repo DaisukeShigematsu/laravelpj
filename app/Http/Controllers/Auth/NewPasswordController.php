@@ -2,19 +2,18 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Auth\Events\PasswordReset;
+use App\Http\Controllers\Controller;///
+use Illuminate\Auth\Events\PasswordReset;///
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rules;
 
-class NewPasswordController extends Controller
+class NewPasswordController extends Controller///
 {
     /**
      * Display the password reset view.
-     *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\View\View
      */
