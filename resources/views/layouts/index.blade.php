@@ -1,16 +1,16 @@
 @extends('layouts.default')
 <style>
     th {
-      background-color: #dcdcdc;
+      background-color: #289ADC;
       color: black;
-      padding: 5px 20px;
+      padding: 5px 40px;
     }
     tr:nth-child(odd) td{
-      background-color: #fff;
+      background-color: #FFFFFF;
     }
     td {
-      padding: 20px 30px;
-      background-color: #eee;
+      padding: 25px 40px;
+      background-color: #EEEEEE;
       text-align: center;
     }
 </style>
@@ -28,7 +28,7 @@
       {{$item->name}}
     </td>
     <td>
-      {{$item->password}}
+      {{$item->email}}
     </td>
   </tr>
   @endforeach

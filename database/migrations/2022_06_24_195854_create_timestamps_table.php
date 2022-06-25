@@ -16,13 +16,9 @@ class CreateTimestampsTable extends Migration
         Schema::create('timestamps', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
-            $table->dateTime('punchIn');
-            $table->dateTime('punchOut')->nullable();
-            $table->timestamp('stamp_date')->nullable();
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
+            $table->dateTime('punchin');
+            $table->dateTime('punchout')->nullable();
             $table->timestamps();
-
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
