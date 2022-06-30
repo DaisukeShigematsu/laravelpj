@@ -9,7 +9,7 @@ class DataUserController extends Controller
 {
     public function index()
     {
-      $items = DB::select('select * from users');
+    $items = DB::table('users')->get();
         return view('index', ['items' => $items]);
     }
 
@@ -27,15 +27,15 @@ class DataUserController extends Controller
             'created_at' => $request->created_at,
             'updated_at' => $request->updated_at,
         ];
-        DB::insert('insert into users (name, id, password, created_at, updated_at) values (:name, :id, :password, :created_at, :updated_at)', $param);
+        DB::table('users')->insert($param);
         return redirect('/data');
     }
 
     public function edit(Request $request)
     {
         $param = ['id' => $request->id];
-        $item = DB::select('select * from users where id = :id', $param);
-        return view('edit', ['form' => $item[0]]);
+        $item = DB::table('users')-> where('id',$request->id)->first();
+        return view('edit', ['form' => $item]);
     }
 
     public function update(Request $request)
@@ -51,20 +51,20 @@ class DataUserController extends Controller
             'updateed_at' => $request->updated_at,
             'total_work' => $request->totalwork,
         ];
-        DB::update('insert into users (name, id, password, punchin, punchout, stamp_date, created_at, updated_at,total_work) values (:name, :id, :password, :punchin, :punchout, :stamp_date, :created_at, :updated_at, :total_work)', $param);
+        DB::table('users')->where('id',$request->id)->update($param);
         return redirect('/data');
     }
 
     public function delete(Request $request)
     {
         $param = ['id' => $request->id];
-        $item = DB::select('select * from users where id = :id', $param);
-        return view('delete', ['form' => $item[0]]);
+        $item = DB::table('users')-> where('id',$request->id) ->delete();
+        return view('delete', ['form' => $item]);
     }
     public function remove(Request $request)
     {
         $param = ['id' => $request->id];
-        DB::delete('delete from users where id =:id', $param);
+        DB::table('users')->where('id',$request->id) ->delete();
         return redirect('/');
     }
 

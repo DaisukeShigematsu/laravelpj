@@ -1,27 +1,24 @@
+<?php
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
-use App\User;
-use App\Timestamp;
 
-class TimestampsController extends Controller
+
+class TimestampController extends Controller
 {
-    public function punchIn()
+    public function punchin()
     {
         $user = Auth::user();
-
         /**
          * 打刻は1日一回までにしたい
          * DB
          */
-        $oldTimestamp = Timestamp::where('user_id', $user->id)->latest()->first();
-        if ($oldTimestamp) {
-            $oldTimestampPunchIn = /** */ ($oldTimestamp->punchIn);
-            $oldTimestampDay = $oldTimestampPunchIn->startOfDay();
+        $oldtimestamp = timestamp::where('user_id', $user->id)->latest()->first();
+        if ($oldtimestamp) {
+            $oldtimestampPunchIn = /** */ ($oldtimestamp->punchIn);
+            $oldtimestampDay = $oldtimestampPunchIn->startOfDay();
         }
 
-        $newTimestampDay = ::today();
 
         /**
          * 日付を比較する。同日付の出勤打刻で、かつ直前のTimestampの退勤打刻がされていない場合エラーを吐き出す。
