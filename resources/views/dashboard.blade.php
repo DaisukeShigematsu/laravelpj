@@ -7,7 +7,7 @@
                     <div class="p-6">
                         <div class="flex items-center">
                             <div class="ml-4 text-lg leading-7 font-semibold">
-                                <a href=""class="btn">勤務開始</a>
+                                <a href="http://localhost/atte3pj/time.php"class="btn">勤務開始</a>
                             </div>
                             <div class="ml-4">
                             </div>
@@ -16,7 +16,7 @@
                     <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
                         <div class="flex items-center">
                             <div class="ml-4 text-lg leading-7 font-semibold">
-                                <a href=""class="btn">勤務終了</a>
+                                <a href="http://localhost/atte3pj/time.php"class="btn">勤務終了</a>
                             </div>
                             <div class="ml-4">
                             </div>
@@ -26,7 +26,7 @@
                     <div class="p-6 border-t border-gray-200 dark:border-gray-700">
                         <div class="flex items-center">
                             <div class="ml-4 text-lg leading-7 font-semibold">
-                                <a href=""class="btn">休憩開始</a>
+                                <a href="http://localhost/atte3pj/time.php"class="btn">休憩開始</a>
                             </div>
                             </div>
                             <div class="ml-4">
@@ -36,7 +36,7 @@
                     <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
                         <div class="flex items-center">
                             <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">
-                                <a href=""class="btn">休憩終了</a>
+                                <a href="http://localhost/atte3pj/time.php"class="btn">休憩終了</a>
                             </div>
                             <div class="ml-4">
                             </div>

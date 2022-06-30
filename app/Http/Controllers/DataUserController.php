@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
 class DataUserController extends Controller
 {
     public function index()
     {
-    $items = DB::table('users')->get();
+        $items = User::simplePaginate(5);
         return view('index', ['items' => $items]);
     }
 

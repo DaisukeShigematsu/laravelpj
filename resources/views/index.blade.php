@@ -21,7 +21,7 @@
   <tr>
     <th>id</th>
     <th>name</th>
-    <th>exif_thumbnail</th>
+    <th>mail</th>
     <th>created_at</th>
   </tr>
 
