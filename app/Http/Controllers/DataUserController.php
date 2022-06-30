@@ -44,12 +44,13 @@ class DataUserController extends Controller
             'name'       => $request->name,
             'id'         => $request->id,
             'password'   => $request->password,
-            'punchin'    => $request->punchin,
-            'punchout'   => $request->punchout,
-            'stamp_date' => $request->stamp_date,
+            'work_start'    => $request->work_start,
+            'work_end'   => $request->work_end,
+            'actual_time' => $request->actual_time,
+            'rest_start' => $request->rest_start,
+            'rest_end' => $request->rest_end,
             'created_at' => $request->created_at,
-            'updateed_at' => $request->updated_at,
-            'total_work' => $request->totalwork,
+            'updated_at' => $request->updated_at,
         ];
         DB::table('users')->where('id',$request->id)->update($param);
         return redirect('/data');
